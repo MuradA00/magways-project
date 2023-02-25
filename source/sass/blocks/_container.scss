@@ -1,0 +1,13 @@
+.main-container {
+  padding: 0 $cont-padding;
+  max-width: calc($container-width + $cont-padding);
+  margin-inline: auto;
+  width: 100%;
+  @include max-width($mainMq) {
+    max-width: calc(rem(1020) + $cont-padding);
+  }
+  @include max-width($mobMq) {
+    max-width: calc(rem(615) + rem(15));
+    padding: 0 rem(15);
+  }
+}

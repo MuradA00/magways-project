@@ -1,0 +1,19 @@
+.help {
+  background-color: var(--clr-main-400);
+  padding: rem(50) 0;
+  color: var(--clr-light-400);
+  &__body {
+    @include dfc;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: rem(10);
+  }
+  &__subheading {
+    font-size: rem(17);
+    line-height: 120%;
+    margin-bottom: rem(30);
+    font-family: var(--ff-sec);
+  }
+}

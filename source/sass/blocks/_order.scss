@@ -1,0 +1,142 @@
+.order {
+  &__heading {
+    margin-bottom: rem(50);
+  }
+  &__row-info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: rem(83) rem(90);
+  }
+  &__row-item {
+    width: calc((100% / 2) - 50px);
+    display: flex;
+    grid-gap: rem(50);
+    align-items: center;
+  }
+  &__row-item-image {
+    max-width: rem(177);
+  }
+  &__row-heading {
+    font-size: rem(22);
+    font-weight: 600;
+    margin-bottom: rem(14);
+  }
+  &__row-descr {
+    flex: 1;
+    margin-bottom: rem(25);
+    p {
+      line-height: 130%;
+      font-size: rem(17);
+      a {
+        font-weight: 600;
+        color: var(--clr-blue-400);
+      }
+    }
+  }
+  &__row-link {
+    @include df;
+    grid-gap: 1.125rem;
+    &:hover {
+      .order__row-link-icon {
+        background-color: var(--clr-main-400);
+        svg {
+          stroke: #fff;
+        }
+      }
+    }
+    span {
+      font-size: rem(20);
+      font-weight: 600;
+      color: var(--clr-blue-400);
+    }
+  }
+  &__row-link-icon {
+    flex: 0 0 auto;
+    width: rem(36);
+    height: rem(36);
+    background-color: hsla(214, 100%, 95%, 1);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 300ms ease;
+    svg {
+      display: block;
+      width: rem(20);
+      height: rem(15);
+      transition: 300ms ease;
+      fill: transparent;
+      stroke: hsla(212, 100%, 8%, 1);
+    }
+  }
+}
+
+@include max-width($mainMq) {
+  .order {
+    &__row {
+      grid-gap: rem(40);
+    }
+    &__row-item {
+      width: calc((100% / 2) - 20px);
+    }
+    &__row-heading {
+      font-size: rem(18);
+    }
+    &__row-descr {
+      margin-bottom: rem(10);
+      p {
+        font-size: rem(14);
+      }
+    }
+    &__row-link {
+      span {
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+@include max-width($tabletMq){
+  .order {
+    &__row {
+      grid-gap: rem(50);
+    }
+    &__row-item {
+      grid-gap: rem(20);
+      width: 100%;
+      max-width: rem(600);
+      margin: 0 auto;
+    }
+  }
+}
+
+@include max-width($mobMq) {
+  .order {
+    &__row-item {
+      justify-content: center;
+    }
+    &__row-item-image {
+      max-width: rem(120);
+    }
+    &__row-descr {
+      max-width: rem(320);
+    }
+  }
+}
+
+@include max-width(25.9em) {
+  .order {
+    &__row-item {
+      flex-direction: column;
+    }
+    &__row-link {
+      justify-content: center;
+    }
+    &__row-heading {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.home {
+  position: relative;
+  z-index: 10;
+  padding-top: rem(30);
+  &__body {
+    background-image: url('../../img/home/home-overlay.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: rem(25);
+    & > * {
+      color: var(--clr-light-400);
+    }
+  }
+  &__income {
+    background-image: url('../../img/home/income-block-overlay.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__main {
+    @include df;
+    justify-content: space-between;
+    padding-top: rem(40);
+  }
+  &__info {
+    max-width: rem(525);
+    padding: 0 0 0 rem(50);
+  }
+  &__title {
+    font-size: rem(55);
+    font-weight: 700;
+    margin-bottom: rem(35);
+  }
+  &__subheading {
+    position: relative;
+    padding-left: 1rem;
+    font-size: rem(17);
+    &::before {
+      @include psevdo;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background-color: var(--clr-light-400);
+    }
+    span {
+      font-size: inherit;
+      display: block;
+      margin-top: rem(2.5);
+      font-weight: 700;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: rem(20);
+  }
+  &__income {
+    transform: translateY(25px);
+    @include df;
+    grid-gap: rem(45);
+    flex: 1;
+    padding: rem(32) rem(48);
+  }
+  &__separator {
+      display: block;
+      width: 1px;
+      height: 81px;
+      background-color: var(--clr-light-400);
+  }
+  &__contact {
+    padding: 0 rem(40) 0 0;
+    grid-gap: 10px;
+  }
+  &__tel-placeholder {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    padding: rem(15) rem(30);
+    border-radius: 10px;
+    input {
+      background-color: transparent;
+      font-size: rem(20);
+      color: #fff;
+      &::placeholder {
+        color: inherit;
+        font-size: inherit;
+      }
+    }
+  }
+  &__income-amount {
+    font-size: rem(50);
+    font-weight: 700;
+    font-family: var(--ff-sec);
+  }
+  &__income-promo {
+    max-width: rem(315);
+    line-height: 140%;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+@include max-width($tabletMq) {
+  .home {
+    &__title {
+      font-size: rem(40);
+      margin-bottom: rem(15);
+    }
+    &__image {
+      width: rem(400);
+      img, picture {
+        width: inherit;
+      }
+    }
+    &__subheading {
+      max-width: rem(300);
+      font-size: rem(14);
+    }
+  }
+}
+
+@include max-width($mainMq) {
+  .home {
+    &__contact {
+      flex-direction: column;
+    }
+    &__main {
+      margin-bottom: rem(25);
+    }
+    &__income {
+      max-width: rem(550);
+      padding: rem(20);
+    }
+    &__income-promo {
+      max-width: rem(250);
+      font-size: rem(15);
+    }
+    &__tel-placeholder {
+      input {
+        font-size: rem(16);
+        &::placeholder {
+
+        }
+      }
+    }
+  }
+}
+
+@include max-width(62.5em) {
+  .home {
+    &__body {
+      background-image: none;
+      max-width: rem(600);
+      margin: 0 auto;
+    }
+    &__main {
+      padding: rem(40) rem(10);
+      background-color: var(--clr-main-400);
+      border-radius: 20px;
+      flex-direction: column;
+      margin-bottom: rem(15);
+    }
+    &__row {
+      padding: rem(20);
+      flex-direction: column;
+      background-color: var(--clr-main-400);
+      border-radius: 20px;
+    }
+    &__income-promo {
+      text-align: center;
+    }
+    &__income-amount {
+      font-size: rem(40);
+    }
+    &__income {
+      padding: rem(0);
+      width: 100%;
+      transform: translateY(0);
+      background-image: none;
+      flex-direction: column;
+      grid-gap: rem(20);
+    }
+    &__contact-btn {
+      width: 100%;
+    }
+    &__separator {
+      width: rem(200);
+      margin: 0 auto;
+      height: 1px;
+    }
+    &__info {
+      padding-left: 0;
+    }
+    &__subheading {
+      margin: 0 auto;
+      max-width: rem(275);
+      font-size: rem(13);
+    }
+    &__image {
+      display: none;
+    }
+    &__contact {
+      padding: 0;
+    }
+    &__title {
+      max-width: rem(350);
+      font-size: rem(32);
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+:root {
+    /* -- Fonts --*/
+    --ff-main: 'Gilroy';
+    --ff-sec: 'Montserrat', sans-serif;
+
+  // -- colors --
+  --bg-body: #fff;
+  --clr-blue-400: hsla(217, 60%, 60%, 1);
+  --clr-main-400: hsla(212, 100%, 8%, 1);
+  --clr-light-300: hsla(214, 100%, 99%, 1);
+  --clr-light-400: hsla(0, 0%, 100%, 1);
+  --clr-light-200: hsla(0, 0%, 100%, 0.3);
+  // -- spacing --
+  --section-gap: rem(90);
+}
+
+$container-width: rem(1310);
+$cont-padding: clamp(15px, vw(20), 20px);
+$mainMq: 80em;
+$tabletMq: 62.5em;
+$mobMq: 48em;
+
+

@@ -1,0 +1,57 @@
+.btn {
+  border-radius: 10px;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: 250ms ease;
+  &_dark {
+    padding: rem(20) rem(40);
+    background-color: var(--clr-main-400);
+    &:hover {
+      background-color: var(--clr-blue-400);
+    }
+    span {
+      text-transform: uppercase;
+      font-size: rem(20);
+      font-weight: 500;
+      color: var(--clr-light-400);
+    }
+  }
+  &_blue {
+    background-color: var(--clr-blue-400);
+    padding: rem(18) rem(40);
+    color: var(--clr-light-400);
+    outline: 1px solid transparent;
+    &:hover {
+      background-color: var(--clr-light-400);
+      color: var(--clr-blue-400);
+      outline: 1px solid var(--clr-blue-400);
+    }
+    span {
+      font-size: rem(15);
+      font-weight: 500;
+    }
+  }
+}
+
+@include max-width($mainMq) {
+  .btn {
+    &_dark {
+      padding: rem(20);
+      span {
+        font-size: rem(16);
+      }
+    }
+  }
+}
+
+@include max-width($mobMq) {
+  .btn {
+    &_dark {
+      span {
+        font-size: rem(14);
+      }
+    }
+  }
+}

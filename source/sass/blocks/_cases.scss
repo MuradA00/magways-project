@@ -1,0 +1,111 @@
+.cases {
+  &__heading {
+    margin-bottom: rem(35);
+  }
+  &__filter {
+    display: flex;
+    grid-gap: rem(15);
+    margin-bottom: rem(50);
+    flex-wrap: wrap;
+  }
+  &__filter-btn {
+    padding: rem(18) rem(40);
+    background-color: hsla(214, 100%, 99%, 1);
+    border-radius: 10px;
+    transition: all 200ms ease;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: rem(15);
+    &_active {
+      background-color: var(--clr-main-400);
+      color: #fff;
+    }
+    &:hover {
+      background-color: var(--clr-main-400);
+      color: #fff;
+    }
+  }
+  &__flex {
+    display: flex;
+    grid-gap: rem(30);
+    flex-wrap: wrap;
+  }
+  &__flex-item {
+    width: calc((100% / 3) - 20px);
+    background-color: var(--clr-light-300);
+    padding: rem(20);
+    border-radius: 10px;
+    transition: all 300ms ease;
+    &:hover {
+      background-color: hsla(214, 100%, 95%, 1);
+    }
+  }
+  &__flex-image {
+    margin-bottom: rem(20);
+  }
+  &__flex-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__flex-heading {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  &__flex-descr {
+    p {
+      font-size: rem(14);
+      line-height: 130%;
+    }
+  }
+  &__flex-info {
+    padding: 0 rem(20);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+  }
+}
+
+@include max-width($mainMq) {
+  .cases {
+    &__flex-item {
+      padding: rem(15);
+    }
+  }
+}
+
+@include max-width($tabletMq) {
+  .cases {
+    &__flex-item {
+      width: calc((100% / 2) - 15px);
+    }
+    &__flex-info {
+      padding: 0;
+    }
+  }
+}
+
+@include max-width($mobMq) {
+  .cases {
+    &__filter {
+      justify-content: center;
+    }
+    &__filter-btn {
+      padding: rem(12) rem(30);
+      font-size: rem(14);
+    }
+  }
+}
+
+@include max-width(35.625em) {
+  .cases {
+    &__flex-image {
+      width: 100%;
+      img, picture {
+        width: inherit;
+      }
+    }
+    &__flex-item {
+      width: 100%;
+    }
+  }
+}
