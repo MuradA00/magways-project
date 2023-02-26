@@ -129,6 +129,17 @@
 @include max-width(34.375em) {
   .hero {
     &__image {
+      width: rem(400);
+      img, picture, source {
+
+      }
+    }
+  }
+}
+
+@include max-width(25em) {
+  .hero {
+    &__image {
       width: auto;
       img, picture, source {
         width: 100%;
