@@ -1,3 +1,8 @@
+AOS.init({
+  once: true
+})
+
+
 const reviews = new Swiper('.reviews__wrapper', {
   slidesPerView: 1,
   spaceBetween: 30,

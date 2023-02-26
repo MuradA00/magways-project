@@ -2,6 +2,7 @@
   position: relative;
   z-index: 10;
   padding-top: rem(30);
+  overflow: hidden;
   &__body {
     background-image: url('../../img/home/home-overlay.svg');
     background-repeat: no-repeat;

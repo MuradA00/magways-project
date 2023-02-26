@@ -38,9 +38,9 @@
 @include max-width($mainMq) {
   .btn {
     &_dark {
-      padding: rem(20);
+      padding: rem(16);
       span {
-        font-size: rem(16);
+        font-size: rem(15);
       }
     }
   }

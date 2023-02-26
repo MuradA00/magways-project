@@ -124,6 +124,11 @@
     &__lang-selected {
       font-size: rem(18);
     }
+    &__btn {
+      span {
+        font-size: rem(15);
+      }
+    }
     &__hidden {
       padding: rem(10);
       grid-gap: rem(10);
