@@ -1,8 +1,9 @@
 .help {
-  background-color: var(--clr-main-400);
-  padding: rem(50) 0;
   color: var(--clr-light-400);
   &__body {
+    background-color: var(--clr-main-400);
+    padding: rem(50) 0;
+    border-radius: 10px;
     @include dfc;
     flex-direction: column;
     text-align: center;
@@ -15,5 +16,14 @@
     line-height: 120%;
     margin-bottom: rem(30);
     font-family: var(--ff-sec);
+  }
+}
+
+@include max-width($mobMq) {
+  .help {
+    background-color: var(--clr-main-400);
+    &__body {
+      background-color: transparent;
+    }
   }
 }

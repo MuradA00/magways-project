@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('_head.html',{})
+
+<body>
+  @@include('_header.html',{})
+  @@include('_modal.html',{})
+  @@include('_menu.html',{})
+  <main>
+    <section class="case-main">
+      <div class="case-main__container main-container">
+        <div class="case-main__body">
+          <div class="case-main__arrow case-main__arrow_prev reviews__arrow reviews__arrow_prev">
+            <img src="img/sprite/arrow-prev.svg" alt="">
+          </div>
+          <div class="case-main__inner swiper">
+            <ul class="case-main__slider swiper-wrapper">
+              <li class="case-main__slider-item swiper-slide">
+                <picture>
+                  <source type='image/webp' srcset='img/case-page/case-slider-image.webp'>
+                  <img src='img/case-page/case-slider-image.png' alt='case-slider-image'>
+                </picture>
+              </li>
+              <li class="case-main__slider-item swiper-slide">
+                <picture>
+                  <source type='image/webp' srcset='img/case-page/case-slider-image.webp'>
+                  <img src='img/case-page/case-slider-image.png' alt='case-slider-image'>
+                </picture>
+              </li>
+              <li class="case-main__slider-item swiper-slide">
+                <picture>
+                  <source type='image/webp' srcset='img/case-page/case-slider-image.webp'>
+                  <img src='img/case-page/case-slider-image.png' alt='case-slider-image'>
+                </picture>
+              </li>
+              <li class="case-main__slider-item swiper-slide">
+                <picture>
+                  <source type='image/webp' srcset='img/case-page/case-slider-image.webp'>
+                  <img src='img/case-page/case-slider-image.png' alt='case-slider-image'>
+                </picture>
+              </li>
+              <li class="case-main__slider-item swiper-slide">
+                <picture>
+                  <source type='image/webp' srcset='img/case-page/case-slider-image.webp'>
+                  <img src='img/case-page/case-slider-image.png' alt='case-slider-image'>
+                </picture>
+              </li>
+            </ul>
+          </div>
+          <div class="case-main__arrow case-main__arrow_next reviews__arrow reviews__arrow_next">
+            <img src="img/sprite/arrow-next.svg" alt="">
+          </div>
+        </div>
+        <div class="case-main__pagination">
+        </div>
+      </div>
+    </section>
+    @@include('_about-project.html',{})
+    @@include('_skills.html',{})
+    <section class="help">
+      <div class="help__container main-container">
+        <div class="help__body">
+          <h6 class="help__title main-title">
+            Залишились питання?
+          </h6>
+          <div class="help__subheading">
+            Вкажіть Ваш телефон і ми відповімо на всі Ваші питання!
+          </div>
+          <button class="help__btn btn btn_blue">
+            <span>Отримати консультацію</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  @@include('_footer.html',{})
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/_casePageSlider.js"></script>
+  <script src="js/_burger.js"></script>
+  <script src="js/_modal.js"></script>
+
+  <script src="js/common.js"></script>
+</body>
+
+</html>
