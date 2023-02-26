@@ -1,0 +1,141 @@
+.modal {
+  position: fixed;
+  background-color: hsla(0, 0%, 0%, .5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  user-select: none;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: 400ms ease;
+  &__close {
+    position: absolute;
+    top: rem(26);
+    right: rem(26);
+    cursor: pointer;
+  }
+  &__overlay {
+    height: 100%;
+    width: 100%;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-height: calc(100% - 1rem);
+    width: fit-content;
+    max-width: rem(1000);
+    margin-inline: auto;
+    padding: rem(10);
+  }
+  &__body {
+    border-radius: 20px;
+    padding: rem(70);
+    opacity: 0;
+    background-color: var(--clr-light-400);
+    min-width: rem(600);
+    transform: translateY(10px);
+    visibility: hidden;
+    transition: all 400ms ease 400ms;
+    position: relative;
+  }
+  &__inner {
+    max-width: rem(460);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__heading {
+    font-size: rem(25);
+    font-weight: 700;
+    margin-bottom: rem(12);
+    font-family: var(--ff-sec);
+  }
+  &__subheading {
+    max-width: rem(240);
+    margin-bottom: 2rem;
+    font-family: var(--ff-sec);
+  }
+  &__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(20);
+    margin-bottom: 2rem;
+  }
+  &__inputs-item {
+    width: 100%;
+    input {
+      background-color: var(--clr-light-300);
+      padding: rem(15) rem(40);
+      border-radius: 10px;
+      font-size: rem(18);
+      color: var(--clr-main-400);
+      transition: all 300ms ease;
+      border: 2px solid transparent;
+      &:focus {
+        border: 2px solid var(--clr-blue-400);
+      }
+      &::placeholder {
+        font-size: inherit;
+        color: hsla(212, 100%, 8%, 0.33);
+      }
+    }
+  }
+  &__submit {
+    padding: rem(18);
+    width: 100%;
+    margin-bottom: rem(10);
+  }
+  &__notif {
+    font-family: var(--ff-sec);
+    max-width: rem(350);
+    font-size: rem(10);
+    color: hsla(212, 100%, 8%, 0.42);
+  }
+}
+
+@include max-width($mobMq) {
+  .modal {
+    &__close {
+      right: rem(10);
+      top: rem(10);
+    }
+    &__body {
+      padding: rem(30);
+      min-width: 100%;
+    }
+    &__inputs {
+      grid-gap: rem(10);
+      margin-bottom: 1rem;
+    }
+    &__subheading {
+      margin-bottom: 1rem;
+    }
+    &__inputs-item {
+      input {
+        font-size: rem(16);
+        padding: rem(15);
+      }
+    }
+  }
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  user-select: auto;
+  .modal {
+    &__body {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+}

@@ -1,5 +1,4 @@
 const reviews = new Swiper('.reviews__wrapper', {
-  loop: true,
   slidesPerView: 1,
   spaceBetween: 30,
   breakpoints: {

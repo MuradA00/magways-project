@@ -1,8 +1,18 @@
 .reviews {
+  .swiper-button-disabled {
+    cursor: default;
+
+    &::before {
+      background-color: hsla(214, 100%, 99%, 1) !important;
+    }
+  }
   &__heading-row {
     @include df;
     justify-content: space-between;
     margin-bottom: rem(50);
+  }
+  &__wrapper {
+    border-radius: 10px ;
   }
   &__row-item {
     background-color: var(--clr-main-400);
@@ -29,16 +39,18 @@
       height: rem(44);
       border-radius: 50%;
       z-index: -1;
+      background-color: hsla(214, 100%, 95%, 1);
+      transition: all 300ms ease;
     }
     &_prev {
       &::before {
         left: -10px;
-        background-color: hsla(214, 100%, 99%, 1);
+
       }
     }
     &_next {
       &::before {
-        background-color: hsla(214, 100%, 95%, 1);
+
         right: -10px;
       }
     }
