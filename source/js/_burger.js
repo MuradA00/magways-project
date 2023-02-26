@@ -17,7 +17,7 @@ function closeMenuByClick() {
 }
 
 menuItemDropdownTrigger.addEventListener('click', function() {
-  this.classList.add('menu-collapse');
+  this.classList.toggle('menu-collapse');
 })
 
 menuModalTrggier.addEventListener('click', () => {
@@ -65,3 +65,11 @@ if (burger) {
 if (burger) {
   burger.addEventListener('click', showMenu);
 }
+
+body.addEventListener('click', (e) => {
+  if (burger.classList.contains('active-burger')) {
+    if (e.target === body) {
+      closeMenu();
+    }
+  }
+})
