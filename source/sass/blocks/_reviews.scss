@@ -94,6 +94,9 @@
       grid-gap: 1.5rem;
       flex-direction: column;
     }
+    &__row-item {
+      padding: rem(20);
+    }
     &__row-descr {
       p {
         font-size: 1rem;
