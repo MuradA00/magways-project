@@ -46,10 +46,10 @@
 @include max-width($mobMq) {
   .price {
     &__body {
-      padding: rem(40) 0;
+      padding: rem(50) 0;
     }
     &__row-item {
-      max-width: rem(305);
+      max-width: rem(400);
       margin: 0 auto;
       padding: 10px;
     }

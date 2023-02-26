@@ -5,6 +5,11 @@
   &__item {
     &_dropdown {
       position: relative;
+      div {
+        &::before {
+          display: none;
+        }
+      }
       &:hover .header__hidden-list {
         opacity: 1;
         transform: translateX(0);
@@ -17,6 +22,7 @@
     line-height: 100%;
     transition: 200ms ease;
     position: relative;
+    cursor: pointer;
     &::before {
       @include psevdo;
       top: rem(25);

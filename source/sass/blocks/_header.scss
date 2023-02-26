@@ -124,6 +124,13 @@
     &__lang-selected {
       font-size: rem(18);
     }
+    &__hidden {
+      padding: rem(10);
+      grid-gap: rem(10);
+    }
+    &__hidden-link {
+      font-size: rem(14);
+    }
     &__dropdown {
       padding-top: rem(0);
     }

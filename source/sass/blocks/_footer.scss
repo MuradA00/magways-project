@@ -10,6 +10,18 @@
   &__socials {
     grid-gap: rem(7);
   }
+  &__socials-link {
+    transition: 200ms ease;
+    svg {
+      transition: inherit;
+      fill: var(--clr-main-400);
+    }
+    &:hover {
+      svg {
+        fill: var(--clr-blue-400);
+      }
+    }
+  }
   &__col {
     &_socials {
       display: grid;
@@ -77,11 +89,7 @@
     &__socials {
       justify-content: center;
     }
-
-  .footer-nav {
-
   }
-}
 }
 
 @include max-width($mobMq) {
