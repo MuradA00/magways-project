@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('_head.html',{})
+<body>
+  @@include('_header.html',{})
+  @@include('_modal.html',{})
+  @@include('_menu.html',{})
+  <main>
+    <section class="calc">
+      <div class="calc__container main-container">
+        <div class="calc__body">
+          <div class="calc__poster">
+            <picture>
+              <source type='image/webp' srcset='img/calc-page/calc-page-image.webp'>
+              <img src='img/calc-page/calc-page-image.png' alt='calc-image-poster'>
+            </picture>
+          </div>
+          <div class="calc__inner">
+            <h1 class="calc__title">
+              Калькулятор розрахунку вартості сайту онлайн
+            </h1>
+            <div class="calc__options">
+              <div class="calc__options-block calc__options-block_flex">
+                <div class="calc__options-flex-item">
+                  <div class="calc__info-input-heading calc__info-input-heading_margin">
+                    Тип проекту
+                  </div>
+                  <div class="calc__options-type">
+                    <div class="calc__options-type-row">
+                      <div class="calc__options-type-name">
+                        Сайт візитка
+                      </div>
+                      <div class="calc__options-type-arrow">
+                        <img src="img/sprite/arrow-down.svg" alt="arrow-down">
+                      </div>
+                    </div>
+                    <ul class="calc__type-dropdown">
+                      <li class="calc__type-dropdown-item">
+                        Інтернет - Магазин
+                      </li>
+                      <li class="calc__type-dropdown-item">
+                        Лендінг - Пейдж
+                      </li>
+                      <li class="calc__type-dropdown-item">
+                        Сайт - Візитка
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="calc__options-flex-item">
+                  <div class="calc__info-input-heading calc__info-input-heading_margin">
+                    Чи є готове ТЗ?
+                  </div>
+                  <div class="calc__toggle">
+                    <label class="calc__toggle-option">
+                      Ні
+                    </label>
+                    <div class="calc__toggle-input">
+                      <input type="checkbox">
+                    </div>
+                    <label class="calc__toggle-option">
+                      Так
+                    </label>
+                  </div>
+                </div>
+             </div>
+             <div class="calc__options-block">
+              <div class="calc__range">
+                <input type="range" min="0" max="100" value="0" step="33" id="range">
+                <div class="calc__range-point calc__range-point_easy">
+                  <span class="calc__range-point-circle"></span>
+                  <span class="calc__range-point-level">
+                    Легкий
+                  </span>
+                </div>
+                <div class="calc__range-point calc__range-point_med">
+                  <span class="calc__range-point-circle"></span>
+                  <span class="calc__range-point-level">
+                    Середній
+                  </span>
+                </div>
+                <div class="calc__range-point calc__range-point_hard">
+                  <span class="calc__range-point-circle"></span>
+                  <span class="calc__range-point-level">
+                    Важчий
+                  </span>
+                </div>
+                <div class="calc__range-point calc__range-point_hardest">
+                  <span class="calc__range-point-circle"></span>
+                  <span class="calc__range-point-level">
+                    Важчий
+                  </span>
+                </div>
+              </div>
+             </div>
+              <div class="calc__options-block calc__options-block_flex">
+                <div class="calc__options-flex-item">
+                  <div class="calc__info-input-heading calc__info-input-heading_margin">
+                    Чи є готовий брендбук?
+                  </div>
+                  <ul class="calc__options-row firstRow">
+                    <li class="calc__options-row-btn">
+                      Так
+                    </li>
+                    <li class="calc__options-row-btn">
+                      Ні
+                    </li>
+                    <li class="calc__options-row-btn">
+                      Давайте зробимо
+                    </li>
+                  </ul>
+                </div>
+                <div class="calc__options-flex-item">
+                  <div class="calc__info-input-heading calc__info-input-heading_margin">
+                    Чи є готовий брендбук?
+                  </div>
+                  <ul class="calc__options-row secondRow">
+                    <li class="calc__options-row-btn">
+                      Так
+                    </li>
+                    <li class="calc__options-row-btn">
+                      Ні
+                    </li>
+                    <li class="calc__options-row-btn">
+                      Давайте зробимо
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="calc__options-block">
+                <div class="calc__info-input-heading calc__info-input-heading_margin">
+                  Блоки
+                </div>
+                <div class="calc__options-block-row">
+                  <ul class="calc__hidden-btns">
+                    <li class="calc__hidden-btns-item">
+                       Новини
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                    </li>
+                    <li class="calc__hidden-btns-item">
+                       Новини
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                    </li>
+                    <li class="calc__hidden-btns-item">
+                      Блог
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                    </li>
+                    <li class="calc__hidden-btns-item">
+                       Новини
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                    </li>
+                  </ul>
+                  <div class="calc__options-row-item">
+                    <ul class="calc__btns">
+                      <li class="calc__btn-item">
+                        Про нас
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                      </li>
+                      <li class="calc__btn-item">
+                        Контакти
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                      </li>
+                      <li class="calc__btn-item">
+                        Новини
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                      </li>
+                      <li class="calc__btn-item">
+                        Блог
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                      </li>
+                      <li class="calc__btn-item">
+                        Новини
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                      </li>
+                      <li class="calc__btn-item">
+                        Блог
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                      </li>
+                      <li class="calc__btn-item calc__btn-item_blue">
+                        +5
+                        <span>
+                          <img src="img/calc-page/btn-close-icon.svg" alt="close-icon">
+                        </span>
+                      </li>
+                    </ul>
+
+                  </div>
+                  <div class="calc__options-row-item-arrow">
+                    <img src="img/sprite/arrow-down.svg" alt="arrow-down">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calc__info">
+              <div class="calc__info-input">
+                <fieldset id="gr-1" class="calc__info-input-item calc__info-input-item_border-bottom">
+                  <div class="calc__info-input-heading">
+                    Хочете чи ви щоб при створенні проекта брав участь SEO - спеціаліст?
+                  </div>
+                    <div class="calc__info-input-checkboxes">
+                      <div class="calc__input-check-block">
+                        <input type="radio" name="gr-1">
+                        <span></span>
+                        Так, на початковому етапі
+                      </div>
+                      <div class="calc__input-check-block checked">
+                        <input type="radio" name="gr-1">
+                        <span></span>
+                        Так, протягом всього проекту
+                      </div>
+                      <div class="calc__input-check-block">
+                        <input type="radio" name="gr-1">
+                        <span></span>
+                        Ні
+                      </div>
+                    </div>
+                </fieldset>
+                <fieldset class="calc__info-input-item calc__info-input-item_border-bottom" id="gr-2">
+                  <div class="calc__info-input-heading">
+                    Хочете чи ви щоб при створенні проекта брав участь SEO - спеціаліст?
+                  </div>
+                    <div class="calc__info-input-checkboxes">
+                      <div class="calc__input-check-block">
+                        <input type="radio" name="gr-2">
+                        <span></span>
+                        Так, на початковому етапі
+                      </div>
+                      <div class="calc__input-check-block">
+                        <input type="radio" name="gr-2">
+                        <span></span>
+                        Ні
+                      </div>
+                    </div>
+                </fieldset>
+                <fieldset class="calc__info-input-item calc__info-input-item_border-bottom" id="gr-3">
+                  <div class="calc__info-input-heading">
+                    Хочете чи ви щоб при створенні проекта брав участь SEO - спеціаліст?
+                  </div>
+                    <div class="calc__info-input-checkboxes">
+                      <div class="calc__input-check-block">
+                        <input type="radio" name="gr-3">
+                        <span></span>
+                        Так, на початковому етапі
+                      </div>
+                      <div class="calc__input-check-block checked">
+                        <input type="radio" name="gr-3">
+                        <span></span>
+                        Так, протягом всього проекту
+                      </div>
+                      <div class="calc__input-check-block">
+                        <input type="radio" name="gr-3">
+                        <span></span>
+                        Ні
+                      </div>
+                    </div>
+                </fieldset>
+                <fieldset class="calc__info-input-item calc__info-input-item_border-bottom" id="gr-4">
+                  <div class="calc__info-input-heading">
+                    Хочете чи ви щоб при створенні проекта брав участь SEO - спеціаліст?
+                  </div>
+                    <div class="calc__info-input-checkboxes">
+                      <div class="calc__input-check-block">
+                        <input type="radio" name="gr-4">
+                        <span></span>
+                        Так, на початковому етапі
+                      </div>
+                      <div class="calc__input-check-block checked">
+                        <input type="radio" name="gr-4">
+                        <span></span>
+                        Так, протягом всього проекту
+                      </div>
+                      <div class="calc__input-check-block">
+                        <input type="radio" name="gr-4">
+                        <span></span>
+                        Ні
+                      </div>
+                    </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="calc__total">
+              <div class="calc__total-amount">
+                 Всього:
+                <span>
+                  4 000 ₴
+                </span>
+              </div>
+              <div class="calc__total-currency">
+                <span class="calc__total-currency-item calc__total-currency-item_active">
+                  ₴
+                </span>
+                <span class="calc__total-currency-item">
+                  $
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="help">
+      <div class="help__container main-container">
+        <div class="help__body">
+          <h6 class="help__title main-title">
+            Залишились питання?
+          </h6>
+          <div class="help__subheading">
+            Вкажіть Ваш телефон і ми відповімо на всі Ваші питання!
+          </div>
+          <button class="help__btn btn btn_blue">
+            <span>Отримати консультацію</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('_footer.html',{})
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/_calcDropdown.js"></script>
+  <script src="js/_burger.js"></script>
+  <script src="js/_modal.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

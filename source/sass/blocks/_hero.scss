@@ -22,6 +22,9 @@
       font-family: var(--ff-sec);
     }
   }
+  &__info {
+    max-width: rem(595);
+  }
   &__btn {
     span {
       text-transform: capitalize;
