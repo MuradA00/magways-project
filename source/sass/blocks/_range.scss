@@ -1,0 +1,71 @@
+.calc {
+  &__range-point {
+    position: relative;
+    z-index: 15;
+    cursor: pointer;
+  }
+  &__range-point-circle {
+
+    position: relative;
+    &::before {
+      @include psevdo;
+      width: 1rem;
+      height: 1rem;
+      background: var(--clr-main-400);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 200ms ease;
+    }
+  }
+  &__range {
+    padding-left: rem(15);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::after {
+      @include psevdo;
+      top: 25%;
+      left: 15px;
+      transform: translate(0%, -50%);
+      background: hsla(214, 100%, 95%, 1);
+      width: calc(100% - 70px);
+      height: 1px;
+      z-index: 10;
+    }
+  }
+}
+
+.point-selected {
+  .calc {
+    &__range-point-circle {
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+}
+
+
+@include  max-width($mobMq) {
+  .calc {
+    &__range {
+      &::after {
+        width: calc(100% - 57px);
+      }
+    }
+    &__range-point-circle {
+      width: rem(18);
+      height: rem(18);
+      &::before {
+        width: rem(9);
+        height: rem(9);
+      }
+    }
+    &__range-point-level {
+      font-size: rem(12);
+    }
+  }
+}

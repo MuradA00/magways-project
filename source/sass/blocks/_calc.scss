@@ -65,6 +65,19 @@
       grid-gap: rem(30);
     }
   }
+  &__hidden-btns-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 99%;
+    max-height: 0;
+    overflow: hidden;
+    transition: 400ms ease;
+  }
+  &__hidden-btns {
+    padding: rem(17) rem(12);
+    border-bottom: 1px solid #e2e9f9;
+  }
   &__options-flex-item {
     flex: 1;
   }
@@ -90,23 +103,21 @@
   &__options-row-item-arrow {
     width: rem(20);
     height: rem(20);
+    transition: 400ms ease;
   }
   &__btns {
     @include df;
-    grid-gap: rem(4);
+    flex-wrap: wrap;
+    grid-gap: rem(10) rem(4);
   }
   &__hidden-btns {
     @include df;
     grid-gap: .25rem;
     flex-wrap: wrap;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 50px;
     background-color: #fafcff;
     z-index: 100;
-    padding: rem(17) rem(12);
     border-radius: 0px 0px 10px 10px;
+    transition: 200ms ease;
   }
   &__hidden-btns-item {
     @include df;
@@ -119,6 +130,9 @@
     cursor: pointer;
     width: fit-content;
     transition: all 250ms ease;
+    span {
+      display: none;
+    }
     &:hover {
       background-color: var(--clr-blue-300);
     }
@@ -267,6 +281,7 @@
     font-size: rem(15);
   }
   .type-collapse {
+    border-radius: 10px 10px 0px 0px;
     ul {
       padding-top: 5px;
       max-height: rem(200);
@@ -347,22 +362,7 @@
     @include df;
     flex-direction: column;
     grid-gap: 8px;
-    position: absolute;
-    top: 0;
     transform: translateX(-50%);
-    z-index: 10;
-    &_easy {
-      left: 7px;
-    }
-    &_med {
-      left: 33.3%;
-    }
-    &_hard {
-      left: 65.6%;
-    }
-    &_hardest {
-      left: calc(100% - 16px);
-    }
   }
   &__range-point-circle {
     display: block;
@@ -442,7 +442,7 @@
       font-size: rem(28);
       text-align: center;
       max-width: rem(400);
-      margin: 0 auto;
+      margin: 0 auto rem(40);
     }
     &__options-block {
       flex-direction: column;
@@ -518,5 +518,24 @@
       grid-gap: 1rem;
       padding: rem(30);
     }
+  }
+}
+
+.collapse-hidden-btns{
+
+  border-radius: 10px 10px 0px 0px;
+  .calc {
+    &__options-row-item-arrow {
+      transform: rotate(180deg);
+    }
+    &__hidden-btns-wrapper {
+      max-height: rem(200);
+    }
+  }
+}
+
+.active-btn {
+  span {
+    display: block;
   }
 }
