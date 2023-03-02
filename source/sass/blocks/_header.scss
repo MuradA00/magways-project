@@ -61,6 +61,7 @@
       .header__dropdown {
         transform: translate(-50%, 0);
         opacity: 1;
+        pointer-events: all;
       }
     }
   }
@@ -74,6 +75,7 @@
     display: flex;
     flex-direction: column;
     grid-gap: rem(5);
+    pointer-events: none;
     transition: 300ms ease;
     left: 50%;
     transform: translate(-50%, 5px);
